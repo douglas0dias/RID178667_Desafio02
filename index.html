@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 02</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <!-- BARRA DE NAVEGAÇÃO -->
+        <div>
+            <nav class="barraNavegacao">
+                <h1 class="logo">DncWeather</h1>
+                <ul class="nav-links">
+                    <li><a href="#formulario">Endereços</a></li>
+                    <li><a href="#previsaoTempo">Previsão do Tempo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEUDO PRINCIPAL -->
+    <main>
+        <!-- TITULO PRINCIPAL DA PAGINA -->
+        <div class="container">
+            <header class="titulo-principal">
+                <h2>Descubra Mais com Precisão: Previsões do Tempo e endereços em tempo real.</h2>
+                <img src="./Imagens/Imagem Titulo.png" alt="ImagemNuvem">
+            </header>
+        </div>
+
+        <!-- FORMULÁRIO -->
+        <div class="container-form" id="formulario">
+
+            <form action="" class="areaFormulario">
+
+                <div class="formGroup">
+                    <label for="nome">Primeiro Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Insira o seu primeiro nome:">
+                </div>
+
+                <div class="formGroup">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Insira o seu email">
+                </div>
+
+                <div class="formGroup">
+                    <label for="cep">Digite o CEP:</label>
+                    <input type="text" name="cep" id="cep" placeholder="Insira o CEP">
+                </div>
+
+                <div class="formGroup">
+                    <label for="latLon">Digite a latitude e longitude para saber a previsão:</label>
+                    <div>
+                        <input type="text" name="latitude" id="latitude" placeholder="Latitude">
+                        <input type="text" name="longitude" id="longitude" placeholder="Longitude">
+                    </div>
+                </div>
+
+                <button type="button" id="botao" onclick="executarBuscas()">Acessar</button>
+
+            </form>
+
+        </div>
+
+        <!-- RESULTADO CEP -->
+        <div class="buscaCep">
+            <h2>Resultado da busca por CEP:</h2>
+            <img src="./Imagens/CEP.png" alt="imagemCep">
+        </div>
+
+        <div class="resultadoBuscaCep">
+            <div class="grid-item" id="logradouro">Logradouro/Nome</div>
+            <div class="grid-item" id="bairro">Bairro/Distrito</div>
+            <div class="grid-item" id="localidade">Localidade/UF</div>
+
+            <div class="grid-item-resultado" id="resultadoNome"></div>
+            <div class="grid-item-resultado" id="resultadoBairro"></div>
+            <div class="grid-item-resultado" id="resultadoUf"></div>
+        </div>
+
+        <!-- RESULTADO TEMPERATURA -->
+        <div class="resultadoTemperatura" id="previsaoTempo">
+            <h2>Previsão do tempo na região:</h2>
+            <img src="./Imagens/Tempo.png" alt="">
+        </div>
+        <div class="temperaturaAPI">
+            <p>Previsão de tempo de acordo com a região: <span id="resultadoTemperatura"></span> </p>
+        </div>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <ul>
+            <li><a href="">Termos de Uso | Política de Privacidade</a></li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: #bababa;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+h2 {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+.barraNavegacao {
+    background-color: #0C70F2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem;
+}
+
+.logo {
+    padding: 0.6rem;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.nav-links li {
+    margin-left: 1.25rem;
+    margin-right: 3.75rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* TITULO PRINCIPAL DA PAGINA */
+.titulo-principal {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 3.1rem;
+}
+
+.titulo-principal>h2 {
+    width: 28.1rem;
+}
+
+.titulo-principal>img {
+    width: 9rem;
+    height: 9rem;
+    margin-left: 3.1rem;
+    margin-bottom: 6.25rem;
+}
+
+/* FORMULARIO */
+.container-form {
+    background-color: #FFFFFF;
+    width: 30rem;
+    height: 25rem;
+    border-radius: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup>label {
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.formGroup>input {
+    border-radius: 0.3rem;
+    background-color: #F2F2F2E5;
+    height: 1.8rem;
+    padding-left: 0.6rem;
+    border: none;
+}
+
+#latitude {
+    border-radius: 0.3rem;
+    background-color: #F2F2F2E5;
+    height: 1.8rem;
+    padding-left: 0.6rem;
+    margin-bottom: 1.25rem;
+    border: none;
+}
+
+#longitude {
+    border-radius: 0.3rem;
+    background-color: #F2F2F2E5;
+    height: 1.8rem;
+    padding-left: 0.6rem;
+    margin-bottom: 1.25rem;
+    border: none;
+}
+
+#botao {
+    width: 100%;
+    height: 1.8rem;
+    background-color: #0C70F2;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 0.3rem;
+    border: none;
+    color: #FFFFFF;
+}
+
+
+/* RESULTADO CEP */
+.buscaCep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.25rem;
+}
+
+.buscaCep>img {
+    width: 6rem;
+    height: 6rem;
+    margin-left: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.resultadoBuscaCep {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    background-color: #0C70F2;
+    color: #ffffff;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.grid-item-resultado {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 800;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#logradouro {
+    border-top-left-radius: 0.6rem;
+}
+
+#localidade {
+    border-top-right-radius: 0.6rem;
+}
+
+#resultadoNome {
+    border-bottom-left-radius: 0.6rem;
+}
+
+#resultadoUf {
+    border-bottom-right-radius: 0.6rem;
+}
+
+/* RESULTADO TEMPERATURA */
+.resultadoTemperatura {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding: 1.25rem 1.25rem;
+}
+
+.resultadoTemperatura>img {
+    width: 9rem;
+    height: 9rem;
+    margin-left: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.temperaturaAPI {
+    width: 100%;
+    height: 3.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+}
+
+.temperaturaAPI>p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    border: 0.063rem solid #0C70F2;
+    border-radius: 3rem;
+    font-weight: 800;
+    background-color: #ffffff;
+    padding: 0.6rem 1.25rem;
+    width: 50%;
+}
+
+/* RODAPE */
+footer {
+    width: 100%;
+    height: 5.5rem;
+    background-color: #0C70F2;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+footer>ul>li {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-right: 3rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+footer>ul>li>a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .barraNavegacao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .titulo-principal {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .titulo-principal>img {
+        width: 6rem;
+        margin: 1rem 0;
+    }
+
+    .container-form {
+        width: 50%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .resultadoBuscaCep,
+    .resultadoTemperatura {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .grid-item,
+    .grid-item-resultado {
+        font-size: 1rem;
+    }
+
+    .buscaCep {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .resultadoTemperatura {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .temperaturaAPI>p {
+        width: 80%;
+    }
+
+    footer {
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    footer ul li {
+        margin: 0.5rem 0;
+    }
+}
